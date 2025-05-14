@@ -33,7 +33,7 @@ return array(
                 'bootstrap.gii'
              ),
 		),
-		
+
 	),
 
 	// application components
@@ -85,7 +85,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-            'authTimeout' => 600, 
+            'authTimeout' => 600,
 			'loginUrl'=>array('site/login'),
 		),
 
@@ -93,12 +93,12 @@ return array(
             'class'=>'application.extensions.image.CImageComponent',
             'driver'=>'GD',
         ),
- 
+
         // se agrega el componente propio para los mensajes de la tabla historial
         'Mensajes' => array(
             'class'=>'ext.Mensajes'
         ),
-        
+
 		// se agrega el componente de YiiBooster
 		'booster'=>array(
 			'class'=> 'ext.booster.components.Booster',
@@ -153,10 +153,10 @@ return array(
 			'charset' => 'utf8',
 		),*/
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=db_atomit',
+			'connectionString' => 'mysql:host=db;dbname=atomit',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'user',
+			'password' => 'password',
 			'charset' => 'utf8',
             'enableParamLogging' => true,
             'enableProfiling' => true,
@@ -177,7 +177,7 @@ return array(
 					'class'=>'CWebLogRoute',
                     'levels'=>'error, warning, info',
 				),
-				
+
 			),
 		),
 	),
