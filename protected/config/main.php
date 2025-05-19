@@ -41,9 +41,9 @@ return array(
         'authManager' => array(
             'class'=>'CDbAuthManager',
             'connectionID'=>'db',
-            'itemTable'=>'AuthItem', // Tabla que contiene los elementos de autorizacion
-            'itemChildTable'=>'AuthItemChild', // Tabla que contiene los elementos padre-hijo
-            'assignmentTable'=>'AuthAssignment', // Tabla que contiene la signacion usuario-autorizacion
+            'itemTable'=>'authitem', // Tabla que contiene los elementos de autorizacion
+            'itemChildTable'=>'authitemchild', // Tabla que contiene los elementos padre-hijo
+            'assignmentTable'=>'authassignment', // Tabla que contiene la signacion usuario-autorizacion
         ),
 		'ePdf' => array(
         'class'         => 'ext.pdf.EYiiPdf',

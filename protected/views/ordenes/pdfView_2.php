@@ -1,4 +1,4 @@
-<?php 
+<?php
 $html='
 <style>
   .logo-emp{
@@ -16,7 +16,7 @@ $html='
 #tabla3 tr td{
 font-family: "Dosis", sans-serif;
     padding-top: 5px;
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
 
 }
 #datos-empresa{
@@ -44,7 +44,7 @@ font-family: "Dosis", sans-serif;
 }
 #tabla4 th, #tabla4 td {
     padding: 10px;
-    text-align: center;    
+    text-align: center;
 }
 
 #datos-equipo{
@@ -78,7 +78,7 @@ font-family: "Dosis", sans-serif;
 }
 #tabla5 th, #tabla5 td {
     padding: 10px;
-    text-align: left;    
+    text-align: left;
 }
 
 #tabla6{
@@ -92,7 +92,7 @@ font-family: "Dosis", sans-serif;
 }
 #tabla6 th, #tabla6 td {
     padding: 10px;
-    text-align: left;    
+    text-align: left;
 }
 #tabla4 th,#tabla5 th,#tabla6 th{
  background-color: #f5f5f5;
@@ -121,7 +121,7 @@ font-family: "Dosis", sans-serif;
 }
 #tabla7 th, #tabla7 td {
     padding: 10px;
-    text-align: left;    
+    text-align: left;
 }
 
 #tabla8{
@@ -135,7 +135,7 @@ font-family: "Dosis", sans-serif;
 }
 #tabla8 th, #tabla8 td {
     padding: 10px;
-    text-align: left;    
+    text-align: left;
 }
 #tabla7 th,#tabla8 th{
  background-color: #f5f5f5;
@@ -162,7 +162,7 @@ font-family: "Dosis", sans-serif;
 }
 #tabla9 th, #tabla9 td {
     padding: 10px;
-    text-align: left;    
+    text-align: left;
 }
 
 #tabla9 th{
@@ -173,44 +173,44 @@ font-family: "Dosis", sans-serif;
     <table id="tabla2">
         <tr>
             <td id="img-template">
-                <img class="logo-emp" src="'.Yii::app()->request->baseUrl.'/img/darsol.png"/>
+                <img class="logo-emp" src="'.$_SERVER['DOCUMENT_ROOT'].'/img/darsol.png"/>
             </td>
             <td id="datos-empresa">
                 <table id="tabla3">
                     <tr>
-                        <td>Dirección: Julian Laguna 5981</td>          
+                        <td>Dirección: Julian Laguna 5981</td>
                     </tr>
                     <tr>
                          <td>Tel: 095679183</td>
-                    </tr>   
-                    <tr>   
+                    </tr>
+                    <tr>
                         <td>E-Mail: dalfaro@outlook.es</td>
-                    </tr>     
-                    <tr>    
+                    </tr>
+                    <tr>
                         <td>Web: www.darsoluciones.com.uy</td>
-                    </tr>  
+                    </tr>
                 </table>
             </td>
             <td id="nro_orden">
                 <table id="tabla1">
                     <tr>
-                        <td style="font-size:40px;">Service Order</td>          
+                        <td style="font-size:40px;">Service Order</td>
                     </tr>
-                    
+
                          <table id="tabla4">
                             <tr>
-                                <th style="border-bottom: 1px solid #dddddd;">N° Orden</th>          
-                                <th style="border-bottom: 1px solid #dddddd;">Fecha</th>          
+                                <th style="border-bottom: 1px solid #dddddd;">N° Orden</th>
+                                <th style="border-bottom: 1px solid #dddddd;">Fecha</th>
                             </tr>
                             <tr>
                                  <td>'.$model->id.'</td>
                                  <!--<td>date("d/m/Y")</td>-->
                                  <td>'.date('d/m/Y').'</td>
-                            </tr>   
+                            </tr>
                          </table>
-                    
+
                  </table>
-            </td>           
+            </td>
         </tr>
       </table>
       <table id="datos-cliente">
@@ -218,7 +218,7 @@ font-family: "Dosis", sans-serif;
               <td id="contenedor-datos-cliente">
                  <table id="tabla5">
                     <tr>
-                        <th colspan="2" style="border-bottom: 1px solid #dddddd;">Datos del cliente</th>                  
+                        <th colspan="2" style="border-bottom: 1px solid #dddddd;">Datos del cliente</th>
                     </tr>
                      <tr>
                          <td style="width:150px;">RUT</td>
@@ -231,16 +231,16 @@ font-family: "Dosis", sans-serif;
                     <tr>
                          <td>Dirección</td>
                          <td>'.$model->clientes->direccion.'</td>
-                    </tr>   
+                    </tr>
                     <tr>
                          <td>Teléfono</td>
                          <td>'.$model->clientes->telefono.'</td>
-                    </tr>   
+                    </tr>
                     <!--<tr>
                          <td>Contacto</td>
                          <td></td>
-                    </tr>-->    
-                 </table> 
+                    </tr>-->
+                 </table>
               </td>
           </tr>
       </table>
@@ -249,7 +249,7 @@ font-family: "Dosis", sans-serif;
               <td id="contenedor-datos-equipo">
                   <table id="tabla6">
                     <tr>
-                        <th colspan="2" style="border-bottom: 1px solid #dddddd;">Datos del equipo</th>                
+                        <th colspan="2" style="border-bottom: 1px solid #dddddd;">Datos del equipo</th>
                     </tr>
                     <tr>
                          <td style="width:150px;">Tipo</td>
@@ -258,31 +258,31 @@ font-family: "Dosis", sans-serif;
                     <tr>
                          <td>Marca</td>
                          <td>'.$model->equipo->marcas->nombre.'</td>
-                    </tr>   
+                    </tr>
                     <tr>
                          <td>Modelo</td>
                          <td>'.$model->equipo->modelo.'</td>
-                    </tr>   
+                    </tr>
                     <tr>
                          <td>N° Serie</td>
                          <td>'.$model->equipo->nro_serie.'</td>
-                    </tr>     
+                    </tr>
                  </table>
               </td>
           </tr>
       </table>
-      
+
       <table id="datos-resolucion">
           <tr>
               <td id="contenedor-datos-resolucion">
                  <table id="tabla9">
                     <tr>
-                        <th style="border-bottom: 1px solid #dddddd;">Falla</th>                  
+                        <th style="border-bottom: 1px solid #dddddd;">Falla</th>
                     </tr>
                     <tr>
                          <td>'.$model->falla.'</td>
-                    </tr> 
-                 </table> 
+                    </tr>
+                 </table>
               </td>
           </tr>
       </table>
@@ -291,12 +291,12 @@ font-family: "Dosis", sans-serif;
               <td id="contenedor-datos-resolucion">
                  <table id="tabla9">
                     <tr>
-                        <th style="border-bottom: 1px solid #dddddd;">Diagnóstico</th>                  
+                        <th style="border-bottom: 1px solid #dddddd;">Diagnóstico</th>
                     </tr>
                     <tr>
                          <td>'.$model->diagnostico.'</td>
-                    </tr> 
-                 </table> 
+                    </tr>
+                 </table>
               </td>
           </tr>
       </table>
@@ -305,12 +305,12 @@ font-family: "Dosis", sans-serif;
               <td id="contenedor-datos-resolucion">
                  <table id="tabla9">
                     <tr>
-                        <th style="border-bottom: 1px solid #dddddd;">Solución</th>                  
+                        <th style="border-bottom: 1px solid #dddddd;">Solución</th>
                     </tr>
                     <tr>
                          <td>'.$model->solucion.'</td>
-                    </tr> 
-                 </table> 
+                    </tr>
+                 </table>
               </td>
           </tr>
       </table>';

@@ -9,7 +9,7 @@ $this->pageTitle=Yii::app()->name;
     )); ?>
 </div><!-- search-->
 <div class="contenedor-cont-vistas-index">
-    <?php 
+    <?php
         $this->widget('booster.widgets.TbExtendedGridView', array(
     	'id'=>'ordenes-grid',
     	'type' => 'condensed',
@@ -30,7 +30,7 @@ $this->pageTitle=Yii::app()->name;
     			array('name'=>'fecha_ingreso','header'=>'Fecha ingreso'),
     			array('name'=>'condicion', 'header'=>'Condicion'),
     			array(
-                        'name'=>'estado', 
+                        'name'=>'estado',
                         'header'=>'Estado'
                      ),
     /*			array('name'=>'direccion', 'header'=>'Dirección'),*/
@@ -42,13 +42,13 @@ $this->pageTitle=Yii::app()->name;
     				'class'=>'booster.widgets.TbButtonColumn',
                     'template'=>'{print} {update} {delete}',
                     'deleteConfirmation'=>'Esta seguro que desea eliminar el cliente?',
-                    'buttons'=>array(           
+                    'buttons'=>array(
                         'print' => array
                             (
-                                'label'=>'<i class="glyphicon glyphicon-print"></i>',                    
+                                'label'=>'<i class="glyphicon glyphicon-print"></i>',
                                 'url'=>'Yii::app()->createUrl("ordenes/pdfcreate", array("id"=>$data->id))',
                                 'options'=>array(
-                                    'target'=>'_black',
+                                    'target'=>'_blank',
                                     'title'=>'Imprimir Orden',
                                 ),
                             ),
@@ -61,7 +61,7 @@ $this->pageTitle=Yii::app()->name;
     			),
     		),
 
-    )); 
+    ));
 
 /*
 'filter'      => CHtml::dropDownList( 'VwProductsList[group_title]', $model->group_title,
@@ -71,7 +71,7 @@ $this->pageTitle=Yii::app()->name;
  */
 
 $this->widget('ext.ypace.YPace', array(
-    'theme' => 'flat-top' 
+    'theme' => 'flat-top'
 ));
 ?>
 </div>
@@ -80,19 +80,19 @@ $this->widget('ext.ypace.YPace', array(
     function lanzarPdf(){
            //alert(id);
            var url='<?php echo Yii::app()->createUrl("ordenes/pdfcreate", array('id'=>$model->id)); ?>';
-           window.open(url, "_blank", "width=900,height=700"); 
+           window.open(url, "_blank", "width=900,height=700");
            return false;
     }
 
 $(document).ready(function() {
-    
+
     $(".buscador").click(function(event) {
         if ($( ".search-index" ).hasClass( "activar" )) {
                 $('.search-index').removeClass('activar');
             }
             else {
                 $('.search-index').addClass('activar');
-                
+
             }
     });
 
